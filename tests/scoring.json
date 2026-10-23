@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "weight_policy": {
+    "version": 1,
+    "basis": "business_priority",
+    "core_min_share": 0.5
+  },
+  "gate_tests": [
+    "test_outputs.py::test_lab_assignments_recover_unlabeled_batches"
+  ],
+  "tests": {
+    "test_outputs.py::test_component_means_are_recovered_from_visible_values": {
+      "priority": "core",
+      "weight": 0.135,
+      "rationale": "核心恢复行为直接决定业务结果是否可用，任一错误都会使整批观测无法交付。"
+    },
+    "test_outputs.py::test_component_dispersions_are_recovered": {
+      "priority": "core",
+      "weight": 0.13,
+      "rationale": "核心恢复行为直接决定业务结果是否可用，任一错误都会使整批观测无法交付。"
+    },
+    "test_outputs.py::test_batch_profiles_are_sorted_by_label": {
+      "priority": "core",
+      "weight": 0.13,
+      "rationale": "核心恢复行为直接决定业务结果是否可用，任一错误都会使整批观测无法交付。"
+    },
+    "test_outputs.py::test_censored_and_visible_counts_are_exact": {
+      "priority": "core",
+      "weight": 0.13,
+      "rationale": "核心恢复行为直接决定业务结果是否可用，任一错误都会使整批观测无法交付。"
+    },
+    "test_outputs.py::test_assignment_cost_is_reported_from_profiles": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_report_is_canonical_json_with_newline": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_success_channels_use_exact_token": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_ledger_appends_one_record_on_success": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_identical_report_is_idempotent": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_changed_input_appends_next_sequence": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_concurrent_append_uses_exclusive_lock": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_incomplete_ledger_tail_is_dropped": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_refusal_preserves_old_report_and_ledger": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_top_level_missing_key_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_top_level_extra_key_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_duplicate_json_key_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_wrong_record_limit_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_empty_record_set_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_catalog_must_have_four_entries": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_catalog_extra_field_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_catalog_weights_must_sum_to_one": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_duplicate_catalog_label_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_too_few_or_too_many_labs_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_censor_threshold_range_is_enforced": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_visible_value_above_threshold_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_non_numeric_record_value_is_refused": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_publish_failure_leaves_no_partial_report": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_report_key_sets_are_exact": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    },
+    "test_outputs.py::test_candidate_entry_is_explicit_and_runnable": {
+      "priority": "supporting",
+      "weight": 0.019,
+      "rationale": "该检查约束输入边界、发布安全或跨运行账本，缺失时恢复结果无法可靠交付。"
+    }
+  }
+}
